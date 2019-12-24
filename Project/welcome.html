@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Admin</title>
+	  <link rel="stylesheet" href="reg.css">
+	  <link rel="icon" href="http://www.thepixelfarm.co.uk/wp-content/uploads/2016/05/admin_v01D_support.png">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   </head>
+	<body>
+	<nav>
+	<section class="nav-container"></section>
+	<aside style="color:white;">Welcome Admin
+	<a href="Logout.php"  style="float:right; color:white; font-size:14pt; text-decoration:none;">logout</a></aside>
+	</nav>
+	<br/>
+	<aside class="left">  
+	<a href="#" id="add" style="float:right; color:white; font-size:14pt; text-decoration:none;">Add new Doctor</a>
+	<br/><hr/>
+	<form method="POST" action="valueadmindoc.php" >
+	<input type="submit"  value="Doctor Details" class="btn" />
+	</form>
+        <hr/>
+        <form method="POST" action="valueadminpatient.php" >
+	<input type="submit"  value="Patient Details" class="btn"/>
+	</form><hr/>
+	<form method="POST" action="valueadminappointment.php" >
+	<input type="submit"  value="Appointment Details" class="btn"/>
+	</form><hr/>
+	<form method="POST" action="valueadminconfirm.php" >
+	<input type="submit"  value=" Confirmed Appointments" class="btn"/>
+	</form><hr/>
+        </aside>
+	<div  class="addform">
+	<table cellpadding="10">
+        <form method="POST" action="admindoc.php">
+        <tr>
+        <td><label>  Name:   </label></td>
+        <td><input type="text" name="username"  required/></td>
+        </tr><tr>
+        <td><label>  Qualification:   </label></td>
+        <td><input type="text" name="qualification" required/></td>
+        </tr><tr>
+        <td><label>   Specialist: </label></td>
+        <td><input type="text" name="specialist" required/></td>
+        </tr><tr>
+        <td><label>    Password: </label></td>
+        <td><input type="password" name="password" required/></td>
+        </tr>
+        </table>
+        <center><input type="submit" name="add" value="ADD" class="add"/></center>
+        </form>
+        </div>
+
+<script type="text/javascript"> 
+$(document).ready(function(){
+	var form=$(".addform");
+	var status=false;
+	$("#add").click(function(event){
+	event.preventDefault();
+	if(status== false)
+	{
+	form.fadeIn();
+	status=true;
+	}
+	else
+	{
+	form.fadeOut();
+	status=false;
+	}
+	
+	})
+	})
+</script>
+	
+	
+</body>
+   
+</html>

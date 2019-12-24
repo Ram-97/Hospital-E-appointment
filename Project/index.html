@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>e-Appointment</title>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="icon" href="http://bharathtrainings.com/img/services/job%20support.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="reg.css" type="text/css"/>
+
+<script type="text/javascript"> </script>
+</head>
+<body>
+<nav>
+	<section class="nav-container">
+		<aside class="logo"><img src="1.jpg"alt="Logo"  width="300" height="70"></aside>
+		<div class="login-form">
+                <form method="POST" action="Login.php">
+		<div><input type="text" name="username" placeholder="Username" class="tlogin" required/>
+		<input type="password" name="password" placeholder="Password" class="tlogin" required/>
+		<input type="submit" name="login" value="login" class="sublogin"/>
+                <span><?php echo $error; ?></span>
+                </div>
+                <div class="forgot">
+		<a href="#" style="text-decoration:none; position:relative; top:20px; font-size:16px;color:white;">Forgot Password?</a></div>
+		</form>
+                </div>       
+	</section>
+</nav>
+
+<div class="reg-form">
+<form method="POST" action="reg.php">
+<div align="center"><i class="fa fa-user"></i>Register Here!!</div>
+<table cellspacing="10px">
+<tr>
+<td><label>Username:</label></td>
+<td>
+<table width="130%"><td><label> Gender :</label></td> 
+<td><label>Marital Status :</label></td></table>
+</td>
+</tr>
+<tr>	
+<td><input type="text" name="username"  class="tepsreg" required/></td>
+ <td><select name="gender"  >
+         <option value="Male" selected="selected">Male</option>
+         <option value="Female">Female</option>
+      </select>
+      <select name="maritalstatus" >
+         <option value="Married">Married</option>
+         <option value="Unmarried" selected="selected">Unmarried</option>
+      </select>
+</td>
+</tr>
+<tr>
+<td><label>Address :</label>
+ <textarea name="address" rows="3" cols="40"  required></textarea>
+ </td>
+<td>    
+<table width="130%">
+<tr>  <td><label>Mobile :</label> </td> </tr>
+<tr> <td>  <input type="text" name="mobile" size="15" class="tepsreg" required/> </td>  </tr>
+<tr>  <td> <label>Email :</label>  </td> </tr>
+<tr>  <td>  <input type="email" name="email" size="38" class="tepsreg" required/> </td> </tr>
+</table>
+</td>
+</tr>  
+<tr>
+<td></td>
+</tr>
+
+<tr><td><table width="83%">
+<td> <label> Country :</label> </td>
+<td> <label>State :</label> </td>  
+</table></td>
+<td> <table width="90%">
+<td> <label>City Name :</label></td>
+<td> <label>Pincode :</label> </td>
+</table> </td>
+</tr>
+
+<tr>
+<td>   
+<select name="country">
+	<option value="India" selected="selected">India</option>
+</select>
+<select name="state" >
+        <option value="AndharaPradesh">AndharaPradesh</option>
+	<option value="ArunachalaPradesh">ArunachalaPradesh</option>
+	<option value="Assam">Assam</option>
+	<option value="Bihar">Bihar</option>
+	<option value="Chhatisgarh">Chhatisgarh</option>
+	<option value="Goa">Goa</option>
+	<option value="Gujarat">Gujarat</option>
+	<option value="Haryana">Haryana</option>
+	<option value="HimachalPradesh">HimachalPradesh</option>
+	<option value="Jammu&Kashmir">Jammu&Kashmir</option>
+	<option value="Jharkhand">Jharkhand</option>
+	<option value="Karnataka">Karnataka</option>
+	<option value="Kerala">Kerala</option>
+	<option value="MadhyaPradesh">MadhyaPradesh</option>
+	<option value="Maharashtra">Maharashtra</option>
+	<option value="Manipur">Manipur</option>
+	<option value="Meghalaya">Meghalaya</option>
+	<option value="Mizoram">Mizoram</option>
+	<option value="Nagaland">Nagaland</option>
+	<option value="Odisha">Odisha</option>
+	<option value="Punjab">Punjab</option>
+	<option value="Rajasthan">Rajasthan</option>
+	<option value="Sikkim">Sikkim</option>
+	<option value="Tamilnadu" selected="selected">Tamilnadu</option>
+	<option value="Telangana">Telangana</option>
+	<option value="Tripura">Tripura</option>
+	<option value="Uttarpradesh">Uttarpradesh</option>
+	<option value="WestBengal">WestBengal</option>
+</select>
+</td>
+<td>   
+<input type="text" name="city" size="38" class="pm" required/>
+     <input type="text" name="pincode" size="15" class="pm" required/>
+</td>        
+</tr>
+<tr>
+<td><label>Security  &nbsp; Question:  &nbsp;  &nbsp; What  &nbsp; is  &nbsp; your &nbsp; birth  &nbsp; place?</label> </td>
+<td>      <input type="text" name="secret" class="tepsreg" required/>  </td>
+</tr>
+
+<tr><td>
+<label>Password :</label>
+ <input type="password" name="password" size="38" class="tepsreg" required/>
+</td>
+<td>
+ <label>Confirm Password :</label>
+ <input type="password" name="cpswd" size="38" class="tepsreg" required/> 
+</td>
+</tr>
+ <tr>
+<td> <input type="submit" value="Submit" class="subreg" /> </td>
+<td>  <input type="reset" value="Cancel" class="canreg"  /> </td>
+</tr>
+</table>
+</form>
+</body>
+</html>

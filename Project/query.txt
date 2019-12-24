@@ -1,0 +1,58 @@
+CREATE TABLE patient (
+    PersonID int(100) PRIMARY KEY AUTO_INCREMENT,
+    username varchar(50),
+    gender varchar(20),
+    maritalstatus varchar(10),
+    address  varchar(255),
+    mobile varchar(13),
+    email  varchar(250),
+    country  varchar(100),
+    state  varchar(100),
+    city  varchar(100),
+    pincode  varchar(30),
+    secret varchar(25),
+    password  varchar(25)
+    );
+
+
+CREATE TABLE doctor (
+    PersonID int(100) PRIMARY KEY AUTO_INCREMENT,
+    username varchar(50),
+    qualification varchar(50),
+    specialist varchar(50),
+    password  varchar(25)
+    );
+
+
+CREATE TABLE login (
+    PersonID int(100) PRIMARY KEY AUTO_INCREMENT,
+    username varchar(50),
+    password  varchar(25)
+    );
+
+CREATE TABLE admin (
+    PersonID int(100) PRIMARY KEY AUTO_INCREMENT,
+    username varchar(50),
+    password  varchar(25)
+    );
+
+CREATE TABLE appointment (
+    ID int(100) PRIMARY KEY AUTO_INCREMENT,
+    name varchar(50),
+    age int(3),
+    date DATE,
+    time  varchar(25),
+    selectdoc varchar(25),
+    user varchar(25)
+    );
+
+CREATE TABLE confirm (
+    ID int(100) PRIMARY KEY AUTO_INCREMENT,
+    name varchar(50),
+    age int(3),
+    date DATE,
+    time  varchar(25),
+    doctor varchar(25),
+    user varchar(25),
+    confirm varchar(25)
+    );
